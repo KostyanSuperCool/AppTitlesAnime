@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             flowLayoutPanelTop = new FlowLayoutPanel();
             btnAddType = new Button();
             btnUpdateType = new Button();
             btnDeleteType = new Button();
             panelFill = new Panel();
             dataGridViewTypes = new DataGridView();
+            errorProvider = new ErrorProvider(components);
             flowLayoutPanelTop.SuspendLayout();
             panelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTypes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanelTop
@@ -108,6 +111,10 @@
             dataGridViewTypes.Size = new Size(914, 430);
             dataGridViewTypes.TabIndex = 0;
             // 
+            // errorProvider
+            // 
+            errorProvider.ContainerControl = this;
+            // 
             // FormListTypes
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -124,6 +131,7 @@
             flowLayoutPanelTop.PerformLayout();
             panelFill.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewTypes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +144,6 @@
         private Button btnDeleteType;
         private Panel panelFill;
         private DataGridView dataGridViewTypes;
+        private ErrorProvider errorProvider;
     }
 }
