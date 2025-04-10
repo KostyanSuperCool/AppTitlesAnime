@@ -10,5 +10,5 @@ public partial class Type
     public string TypeName { get; set; } = null!;
 
     //навигационные свойства
-    public virtual ICollection<AnimeTitile> AnimeTitiles { get; set; } = new List<AnimeTitile>();
+    public virtual ICollection<AnimeTitile> AnimeTitles { get; set; } = new List<AnimeTitile>();
 }

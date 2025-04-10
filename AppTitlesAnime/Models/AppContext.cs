@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AppTitlesAnime.Models;
 
-public partial class DbAnimeTitlesContext : DbContext
+public partial class AppContext : DbContext
 {
-    public DbAnimeTitlesContext()
+    public AppContext()
     {
     }
 
-    public DbAnimeTitlesContext(DbContextOptions<DbAnimeTitlesContext> options)
+    public AppContext(DbContextOptions<AppContext> options)
         : base(options)
     {
     }
@@ -49,7 +49,7 @@ public partial class DbAnimeTitlesContext : DbContext
             entity.Property(e => e.Poster).HasColumnName("poster");
             entity.Property(e => e.Studio).HasColumnName("studio");
 
-            entity.HasOne(d => d.Type).WithMany(p => p.AnimeTitiles)
+            entity.HasOne(d => d.Type).WithMany(p => p.AnimeTitles)
                 .HasForeignKey(d => d.IdType)
                 .HasConstraintName("fk_titles_to_types");
         });
