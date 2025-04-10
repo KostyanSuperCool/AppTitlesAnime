@@ -21,7 +21,7 @@ namespace AppTitlesAnime
             base.OnLoad(e);
             this.db = new AppContext();
             this.db.Types.Load();
-            this.dataGridViewTypes.DataSource = this.db.Types.Local.OrderBy(o=>o.TypeName).ToList();
+            this.dataGridViewTypes.DataSource = this.db.Types.Local.OrderBy(o => o.TypeName).ToList();
 
             // скрытие столбцов
             dataGridViewTypes.Columns["Id"].Visible = false;
@@ -44,7 +44,7 @@ namespace AppTitlesAnime
             FormAddType formAddType = new();
             DialogResult result = formAddType.ShowDialog(this);
 
-            if (result == DialogResult.Cancel) 
+            if (result == DialogResult.Cancel)
                 return;
 
             Type type = new Type();
@@ -54,6 +54,35 @@ namespace AppTitlesAnime
             db.SaveChanges();
 
             MessageBox.Show("Новый объект добавлен");
+
+            this.dataGridViewTypes.DataSource = this.db.Types.Local.OrderBy(o => o.TypeName).ToList();
+        }
+
+        private void BtnUpdateType_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewTypes.SelectedRows.Count == 0)
+                return;
+
+            int index = dataGridViewTypes.SelectedRows[0].Index;
+            short id = 0;
+            bool converted = Int16.TryParse(dataGridViewTypes[0, index].Value.ToString(), out id);
+            if (!converted)
+                return;
+
+            Type type = db.Types.Find(id);
+            FormAddType formAddType = new();
+            formAddType.textBoxTypeName.Text = type.TypeName;
+
+            DialogResult result = formAddType.ShowDialog(this);
+
+            if(result == DialogResult.Cancel)
+                return;
+            
+            type.TypeName=formAddType.textBoxTypeName.Text;
+            db.Types.Update(type);
+            db.SaveChanges();
+           
+            MessageBox.Show("Объект изменен");
 
             this.dataGridViewTypes.DataSource = this.db.Types.Local.OrderBy(o => o.TypeName).ToList();
         }

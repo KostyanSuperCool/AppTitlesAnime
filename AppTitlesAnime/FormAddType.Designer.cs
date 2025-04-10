@@ -96,7 +96,6 @@ namespace AppTitlesAnime
             btnSaveChanges.TabIndex = 0;
             btnSaveChanges.Text = "Сохранить";
             btnSaveChanges.UseVisualStyleBackColor = true;
-            btnSaveChanges.Click += btnSaveChanges_Click;
             // 
             // btnCancel
             // 
@@ -137,7 +136,6 @@ namespace AppTitlesAnime
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         #endregion
