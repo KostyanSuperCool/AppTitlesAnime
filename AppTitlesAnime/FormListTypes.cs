@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Data;
-using AppTitlesAnime.Models;
 using Microsoft.EntityFrameworkCore;
 using AppContext = AppTitlesAnime.Models.AppContext;
 using Type = AppTitlesAnime.Models.Type;

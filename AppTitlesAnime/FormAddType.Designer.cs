@@ -96,6 +96,7 @@ namespace AppTitlesAnime
             btnSaveChanges.TabIndex = 0;
             btnSaveChanges.Text = "Сохранить";
             btnSaveChanges.UseVisualStyleBackColor = true;
+            btnSaveChanges.Click += btnSaveChanges_Click_1;
             // 
             // btnCancel
             // 

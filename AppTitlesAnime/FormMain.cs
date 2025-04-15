@@ -11,5 +11,16 @@ namespace AppTitlesAnime
             FormListTypes formListTypes = new FormListTypes();
             formListTypes.Show();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGenreTypes_Click(object sender, EventArgs e)
+        {
+            FormListGenres formGenreTypes = new FormListGenres();
+            formGenreTypes.Show();
+        }
     }
 }
