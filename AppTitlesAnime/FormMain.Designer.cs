@@ -30,6 +30,7 @@
         {
             btnShowTypes = new Button();
             btnGenreTypes = new Button();
+            btnStausTypes = new Button();
             SuspendLayout();
             // 
             // btnShowTypes
@@ -55,12 +56,24 @@
             btnGenreTypes.UseVisualStyleBackColor = true;
             btnGenreTypes.Click += btnGenreTypes_Click;
             // 
+            // btnStausTypes
+            // 
+            btnStausTypes.AutoSize = true;
+            btnStausTypes.Location = new Point(12, 123);
+            btnStausTypes.Name = "btnStausTypes";
+            btnStausTypes.Size = new Size(293, 35);
+            btnStausTypes.TabIndex = 2;
+            btnStausTypes.Text = "Отобраить список \"Тип Статус\"";
+            btnStausTypes.UseVisualStyleBackColor = true;
+            btnStausTypes.Click += btnStausTypes_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(502, 457);
+            Controls.Add(btnStausTypes);
             Controls.Add(btnGenreTypes);
             Controls.Add(btnShowTypes);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -76,5 +89,6 @@
 
         private Button btnShowTypes;
         private Button btnGenreTypes;
+        private Button btnStausTypes;
     }
 }
