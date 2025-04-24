@@ -48,7 +48,7 @@ namespace AppTitlesAnime
             if (exists)
             {
                 btnSaveChanges.Enabled = false;//уходим в ошибку 
-                errorProvider.SetError(textBoxTypeName, "Такой жанр уже есть");
+                errorProvider.SetError(textBoxTypeName, "Такой тип уже есть");
 
             }
             else
