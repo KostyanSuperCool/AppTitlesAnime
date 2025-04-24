@@ -1,7 +1,6 @@
 ﻿using AppTitlesAnime.Models;
 using Microsoft.EntityFrameworkCore;
 using AppContext = AppTitlesAnime.Models.AppContext;
-using Type = AppTitlesAnime.Models.Type;
 
 namespace AppTitlesAnime
 {
@@ -51,12 +50,6 @@ namespace AppTitlesAnime
 
             this.dataGridViewTypes.DataSource = this.db.Genres.Local.OrderBy(o => o.GenreName).ToList();
         }
-
-        private void FormListGenres_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnUpdateGenreType_Click(object sender, EventArgs e)
         {
             if (dataGridViewTypes.SelectedRows.Count == 0)
@@ -110,6 +103,7 @@ namespace AppTitlesAnime
 
             Genre genre = db.Genres.Find(id);
             db.Genres.Remove(genre);
+            db.SaveChanges();
 
             MessageBox.Show("Строка удалена ");
             this.dataGridViewTypes.DataSource = this.db.Genres.Local.OrderBy(o => o.GenreName).ToList();

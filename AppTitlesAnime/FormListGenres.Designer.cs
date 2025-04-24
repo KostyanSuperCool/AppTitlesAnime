@@ -45,7 +45,7 @@
             // flowLayoutPanelTop
             // 
             flowLayoutPanelTop.AutoSize = true;
-            flowLayoutPanelTop.BackColor = Color.DarkOrchid;
+            flowLayoutPanelTop.BackColor = Color.White;
             flowLayoutPanelTop.Controls.Add(btnAddGenreType);
             flowLayoutPanelTop.Controls.Add(btnUpdateGenreType);
             flowLayoutPanelTop.Controls.Add(btnDeleteGenreType);
@@ -59,37 +59,40 @@
             // btnAddGenreType
             // 
             btnAddGenreType.AutoSize = true;
+            btnAddGenreType.BackColor = Color.White;
             btnAddGenreType.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnAddGenreType.Location = new Point(13, 13);
             btnAddGenreType.Name = "btnAddGenreType";
             btnAddGenreType.Size = new Size(106, 35);
             btnAddGenreType.TabIndex = 0;
             btnAddGenreType.Text = "Добавить";
-            btnAddGenreType.UseVisualStyleBackColor = true;
+            btnAddGenreType.UseVisualStyleBackColor = false;
             btnAddGenreType.Click += BtnAddGenreType_Click;
             // 
             // btnUpdateGenreType
             // 
             btnUpdateGenreType.AutoSize = true;
+            btnUpdateGenreType.BackColor = Color.White;
             btnUpdateGenreType.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnUpdateGenreType.Location = new Point(125, 13);
             btnUpdateGenreType.Name = "btnUpdateGenreType";
             btnUpdateGenreType.Size = new Size(151, 35);
             btnUpdateGenreType.TabIndex = 1;
             btnUpdateGenreType.Text = "Редактировать";
-            btnUpdateGenreType.UseVisualStyleBackColor = true;
+            btnUpdateGenreType.UseVisualStyleBackColor = false;
             btnUpdateGenreType.Click += BtnUpdateGenreType_Click;
             // 
             // btnDeleteGenreType
             // 
             btnDeleteGenreType.AutoSize = true;
+            btnDeleteGenreType.BackColor = Color.White;
             btnDeleteGenreType.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnDeleteGenreType.Location = new Point(282, 13);
             btnDeleteGenreType.Name = "btnDeleteGenreType";
             btnDeleteGenreType.Size = new Size(92, 35);
             btnDeleteGenreType.TabIndex = 2;
             btnDeleteGenreType.Text = "Удалить";
-            btnDeleteGenreType.UseVisualStyleBackColor = true;
+            btnDeleteGenreType.UseVisualStyleBackColor = false;
             btnDeleteGenreType.Click += btnDeleteGenreType_Click;
             // 
             // dataGridViewTypes
@@ -109,6 +112,7 @@
             // 
             // panelFill
             // 
+            panelFill.BackColor = Color.White;
             panelFill.Controls.Add(dataGridViewTypes);
             panelFill.Dock = DockStyle.Fill;
             panelFill.Location = new Point(0, 61);
@@ -130,7 +134,6 @@
             Controls.Add(flowLayoutPanelTop);
             Name = "FormListGenres";
             Text = "Список Тип жанра";
-            Load += FormListGenres_Load;
             flowLayoutPanelTop.ResumeLayout(false);
             flowLayoutPanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTypes).EndInit();

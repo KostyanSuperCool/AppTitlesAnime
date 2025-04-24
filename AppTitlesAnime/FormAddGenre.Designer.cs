@@ -69,9 +69,9 @@
             labelTypenNameGenre.Dock = DockStyle.Top;
             labelTypenNameGenre.Location = new Point(10, 10);
             labelTypenNameGenre.Name = "labelTypenNameGenre";
-            labelTypenNameGenre.Size = new Size(107, 25);
+            labelTypenNameGenre.Size = new Size(120, 25);
             labelTypenNameGenre.TabIndex = 0;
-            labelTypenNameGenre.Text = "Тип Жанра";
+            labelTypenNameGenre.Text = "Жанр аниме";
             // 
             // flowLayoutPanelBottonGenre
             // 

@@ -44,6 +44,7 @@
             // panelFillStatus
             // 
             panelFillStatus.AutoSize = true;
+            panelFillStatus.BackColor = Color.White;
             panelFillStatus.Controls.Add(textBoxStatusName);
             panelFillStatus.Controls.Add(labelStatusName);
             panelFillStatus.Dock = DockStyle.Fill;
@@ -71,9 +72,9 @@
             labelStatusName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelStatusName.Location = new Point(10, 10);
             labelStatusName.Name = "labelStatusName";
-            labelStatusName.Size = new Size(102, 25);
+            labelStatusName.Size = new Size(128, 25);
             labelStatusName.TabIndex = 0;
-            labelStatusName.Text = "Тип статус";
+            labelStatusName.Text = "Статус аниме";
             // 
             // flowLayoutPanelBottomStatus
             // 

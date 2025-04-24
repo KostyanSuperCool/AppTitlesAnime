@@ -59,37 +59,40 @@
             // btnAddStatus
             // 
             btnAddStatus.AutoSize = true;
+            btnAddStatus.BackColor = Color.White;
             btnAddStatus.Font = new Font("Segoe UI", 14.25F);
             btnAddStatus.Location = new Point(13, 13);
             btnAddStatus.Name = "btnAddStatus";
             btnAddStatus.Size = new Size(106, 35);
             btnAddStatus.TabIndex = 0;
             btnAddStatus.Text = "Добавить";
-            btnAddStatus.UseVisualStyleBackColor = true;
+            btnAddStatus.UseVisualStyleBackColor = false;
             btnAddStatus.Click += BtnAddStatus_Click;
             // 
             // btnUpdateStatus
             // 
             btnUpdateStatus.AutoSize = true;
+            btnUpdateStatus.BackColor = Color.White;
             btnUpdateStatus.Font = new Font("Segoe UI", 14.25F);
             btnUpdateStatus.Location = new Point(125, 13);
             btnUpdateStatus.Name = "btnUpdateStatus";
             btnUpdateStatus.Size = new Size(151, 35);
             btnUpdateStatus.TabIndex = 1;
             btnUpdateStatus.Text = "Редактировать";
-            btnUpdateStatus.UseVisualStyleBackColor = true;
+            btnUpdateStatus.UseVisualStyleBackColor = false;
             btnUpdateStatus.Click += BtnUpdateStatus_Click;
             // 
             // btnDeleteStatus
             // 
             btnDeleteStatus.AutoSize = true;
+            btnDeleteStatus.BackColor = Color.White;
             btnDeleteStatus.Font = new Font("Segoe UI", 14.25F);
             btnDeleteStatus.Location = new Point(282, 13);
             btnDeleteStatus.Name = "btnDeleteStatus";
             btnDeleteStatus.Size = new Size(92, 35);
             btnDeleteStatus.TabIndex = 2;
             btnDeleteStatus.Text = "Удалить";
-            btnDeleteStatus.UseVisualStyleBackColor = true;
+            btnDeleteStatus.UseVisualStyleBackColor = false;
             btnDeleteStatus.Click += BtnDeleteStatus_Click;
             // 
             // dataGridViewStatus
@@ -108,6 +111,7 @@
             // 
             // panelFillStatus
             // 
+            panelFillStatus.BackColor = Color.White;
             panelFillStatus.Controls.Add(dataGridViewStatus);
             panelFillStatus.Dock = DockStyle.Fill;
             panelFillStatus.Location = new Point(0, 61);
