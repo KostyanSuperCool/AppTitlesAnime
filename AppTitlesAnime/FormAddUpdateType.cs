@@ -2,10 +2,10 @@
 using AppContext = AppTitlesAnime.Models.AppContext;
 namespace AppTitlesAnime
 {
-    public partial class FormAddType : Form
+    public partial class FormAddUpdateType : Form
     {
         private AppContext db;
-        public FormAddType()
+        public FormAddUpdateType()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace AppTitlesAnime
                 errorProvider.Clear();
                 btnSaveChanges.Enabled = true;
             }
-            FormAddType formAddType = new FormAddType();
+            FormAddUpdateType formAddType = new FormAddUpdateType();
             string newTypeAnime = textBoxTypeName.Text;//сохраняем текст в newStatusAnime
 
             bool exists = db.Types.Any(t => t.TypeName == newTypeAnime);
