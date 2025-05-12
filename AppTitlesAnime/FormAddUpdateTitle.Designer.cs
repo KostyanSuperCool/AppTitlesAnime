@@ -33,7 +33,7 @@
             labelDescription = new Label();
             textBoxStudio = new TextBox();
             labelStudio = new Label();
-            numericUpDownDuration = new NumericUpDown();
+            numUpDownDuration = new NumericUpDown();
             labelDuration = new Label();
             numUpDownCountSeries = new NumericUpDown();
             labelCountSeries = new Label();
@@ -47,7 +47,7 @@
             textBoxOriginalName = new TextBox();
             labelOriginalName = new Label();
             panelFill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownDuration).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numUpDownDuration).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numUpDownCountSeries).BeginInit();
             flowLayoutPanelBottom.SuspendLayout();
             SuspendLayout();
@@ -58,7 +58,7 @@
             panelFill.Controls.Add(labelDescription);
             panelFill.Controls.Add(textBoxStudio);
             panelFill.Controls.Add(labelStudio);
-            panelFill.Controls.Add(numericUpDownDuration);
+            panelFill.Controls.Add(numUpDownDuration);
             panelFill.Controls.Add(labelDuration);
             panelFill.Controls.Add(numUpDownCountSeries);
             panelFill.Controls.Add(labelCountSeries);
@@ -78,13 +78,13 @@
             // 
             // textBoxDescription
             // 
-            textBoxDescription.Dock = DockStyle.Top;
+            textBoxDescription.Dock = DockStyle.Fill;
             textBoxDescription.Location = new Point(10, 383);
             textBoxDescription.Margin = new Padding(3, 15, 3, 3);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.ScrollBars = ScrollBars.Vertical;
-            textBoxDescription.Size = new Size(854, 108);
+            textBoxDescription.Size = new Size(854, 127);
             textBoxDescription.TabIndex = 14;
             // 
             // labelDescription
@@ -116,13 +116,14 @@
             labelStudio.TabIndex = 11;
             labelStudio.Text = "Студия";
             // 
-            // numericUpDownDuration
+            // numUpDownDuration
             // 
-            numericUpDownDuration.Dock = DockStyle.Top;
-            numericUpDownDuration.Location = new Point(10, 267);
-            numericUpDownDuration.Name = "numericUpDownDuration";
-            numericUpDownDuration.Size = new Size(854, 33);
-            numericUpDownDuration.TabIndex = 10;
+            numUpDownDuration.Dock = DockStyle.Top;
+            numUpDownDuration.Location = new Point(10, 267);
+            numUpDownDuration.Maximum = new decimal(new int[] { 1440, 0, 0, 0 });
+            numUpDownDuration.Name = "numUpDownDuration";
+            numUpDownDuration.Size = new Size(854, 33);
+            numUpDownDuration.TabIndex = 10;
             // 
             // labelDuration
             // 
@@ -138,6 +139,7 @@
             // 
             numUpDownCountSeries.Dock = DockStyle.Top;
             numUpDownCountSeries.Location = new Point(10, 209);
+            numUpDownCountSeries.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
             numUpDownCountSeries.Name = "numUpDownCountSeries";
             numUpDownCountSeries.Size = new Size(854, 33);
             numUpDownCountSeries.TabIndex = 8;
@@ -259,7 +261,7 @@
             Text = "Информация об аниме";
             panelFill.ResumeLayout(false);
             panelFill.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownDuration).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numUpDownDuration).EndInit();
             ((System.ComponentModel.ISupportInitialize)numUpDownCountSeries).EndInit();
             flowLayoutPanelBottom.ResumeLayout(false);
             flowLayoutPanelBottom.PerformLayout();
@@ -285,6 +287,6 @@
         private Label labelStudio;
         protected internal NumericUpDown numUpDownCountSeries;
         protected internal ComboBox comboBoxType;
-        protected internal NumericUpDown numericUpDownDuration;
+        protected internal NumericUpDown numUpDownDuration;
     }
 }
